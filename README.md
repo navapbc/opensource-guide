@@ -41,7 +41,30 @@ This open-source project provides a complete solution for state Medicaid agencie
 
 ## Features
 
-### Architecture
+### For Beneficiaries
+
+- **Activity Reporting**: Easy-to-use forms for reporting qualifying community engagement activities
+- **Document Upload**: Secure document submission for verification
+- **Exemption Requests**: Simple process for requesting exemptions with supporting documentation
+- **Multi-language Support**: Available in English and Spanish
+- **Mobile-Friendly**: Responsive design works on all devices
+
+### For State Staff
+
+- **Case Management**: Comprehensive tools for reviewing and processing applications
+- **Task Management**: Automated workflow management with task assignment
+- **Document Review**: Secure access to uploaded documents and supporting materials
+- **Reporting Dashboard**: Analytics and reporting capabilities
+- **Member Search**: Advanced search and filtering capabilities
+
+### For Administrators
+
+- **User Management**: Role-based access control with AWS Cognito integration
+- **System Monitoring**: CloudWatch integration for performance monitoring
+- **Audit Trails**: Comprehensive logging and audit capabilities
+- **Feature Flags**: Dynamic feature management for controlled rollouts
+
+## Architecture
 
 The platform consists of:
 
@@ -112,7 +135,7 @@ make infra-configure-network NETWORK_NAME=dev
 make infra-update-app-build-repository APP_NAME=reporting-app
 ```
 
-## 📚 Documentation
+## Documentation
 
 - **[System Architecture](docs/system-architecture.md)** - High-level system overview
 - **[Reporting App Documentation](docs/reporting-app/)** - Detailed application documentation
@@ -120,69 +143,7 @@ make infra-update-app-build-repository APP_NAME=reporting-app
 - **[Contributing Guidelines](CONTRIBUTING.md)** - How to contribute to the project
 - **[Security Policy](SECURITY.md)** - Security practices and reporting
 
-## 🎯 Features
-
-### For Beneficiaries
-
-- **Activity Reporting**: Easy-to-use forms for reporting qualifying community engagement activities
-- **Document Upload**: Secure document submission for verification
-- **Exemption Requests**: Simple process for requesting exemptions with supporting documentation
-- **Multi-language Support**: Available in English and Spanish
-- **Mobile-Friendly**: Responsive design works on all devices
-
-### For State Staff
-
-- **Case Management**: Comprehensive tools for reviewing and processing applications
-- **Task Management**: Automated workflow management with task assignment
-- **Document Review**: Secure access to uploaded documents and supporting materials
-- **Reporting Dashboard**: Analytics and reporting capabilities
-- **Member Search**: Advanced search and filtering capabilities
-
-### For Administrators
-
-- **User Management**: Role-based access control with AWS Cognito integration
-- **System Monitoring**: CloudWatch integration for performance monitoring
-- **Audit Trails**: Comprehensive logging and audit capabilities
-- **Feature Flags**: Dynamic feature management for controlled rollouts
-
-## 🔧 Development
-
-### Running Tests
-
-```bash
-# Ruby/Rails tests
-cd reporting-app
-bundle exec rspec
-
-# End-to-end tests
-make e2e-test APP_NAME=reporting-app BASE_URL=http://localhost:3000
-
-# Infrastructure tests
-make infra-test-service APP_NAME=reporting-app
-```
-
-### Code Quality
-
-```bash
-# Linting
-make infra-lint
-cd reporting-app && bundle exec rubocop
-
-# Security scanning
-trivy fs .
-```
-
-## 🌐 Deployment
-
-The project supports multiple deployment environments:
-
-- **Development**: Local development with Docker
-- **Staging**: AWS-based staging environment
-- **Production**: Full production deployment with monitoring and alerting
-
-See [Infrastructure Documentation](docs/infra/) for detailed deployment instructions.
-
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
 
@@ -191,26 +152,17 @@ We welcome contributions from the community! Please see our [Contributing Guidel
 - Pull request process
 - Coding standards
 
-## 📄 License
+## License
 
-This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+This repo available under the [Apache 2.0 License](https://github.com/navapbc/community-engagement-medicaid/blob/main/LICENSE)
 
-## 🆘 Support
+If you are interested in an integration for your state managed by Nava, take a look at [our website](https://navapbc.com/).
+
+## Support
 
 - **Documentation**: Check our [comprehensive documentation](docs/)
 - **Issues**: Report bugs and request features via [GitHub Issues](https://github.com/navapbc/community-engagement-medicaid/issues)
 - **Discussions**: Join community discussions in [GitHub Discussions](https://github.com/navapbc/community-engagement-medicaid/discussions)
 - **Security**: Report security vulnerabilities via our [Security Policy](SECURITY.md)
-
-## 🏛️ About
-
-This project is developed by [Nava PBC](https://www.navapbc.com/) in partnership with state Medicaid agencies to improve the administration of community engagement requirements. The platform is designed to be:
-
-- **Accessible**: WCAG 2.1 AA compliant with USWDS components
-- **Secure**: Built with security-first principles and regular security assessments
-- **Scalable**: Cloud-native architecture supporting high availability and performance
-- **Compliant**: Designed to meet federal and state regulatory requirements
-
----
 
 For more information about Medicaid community engagement requirements and this platform, please visit our [documentation](docs/) or contact the development team.
