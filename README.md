@@ -1,26 +1,23 @@
 # Community Engagement Medicaid
 
-A comprehensive platform for managing Medicaid community engagement requirements, built to help states implement and administer work requirements and exemption processes in compliance with federal regulations.
+,
 
 <h1 align="center">
   <img width="300" src="/img/logoname-white.svg#gh-dark-mode-only" alt="infisical">
 </h1>
 <p align="center">
-  <p align="center"><b>The open-source secret management platform</b>: Sync secrets/configs across your team/infrastructure and prevent secret leaks.</p>
+  <p align="center"><b>A comprehensive platform for managing Medicaid community engagement requirements</b>: built to help states implement and administer work requirements and exemption processes in compliance with federal regulations.</p>
 </p>
 
 <h4 align="center">
-  <a href="https://infisical.com/slack">Slack</a> |
-  <a href="https://infisical.com/">Infisical Cloud</a> |
-  <a href="https://infisical.com/docs/self-hosting/overview">Self-Hosting</a> |
-  <a href="https://infisical.com/docs/documentation/getting-started/introduction">Docs</a> |
-  <a href="https://www.infisical.com">Website</a> |
-  <a href="https://infisical.com/careers">Hiring (Remote/SF)</a>
+  <a href="https://navapbc.com">Website</a> |
+  <a href="https://navapbc.com/careers">Hiring (Remote)</a>
 </h4>
 
 <h4 align="center">
-  <a href="https://github.com/Infisical/infisical/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Infisical is released under the MIT license." />
+  <a href="https://github.com/navapbc/community-engagement-medicaid/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-apache2.0-red" alt="OSCER is released under the Apache 2.0 license" >
+
   </a>
   <a href="https://github.com/infisical/infisical/blob/main/CONTRIBUTING.md">
     <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen" alt="PRs welcome!" />
