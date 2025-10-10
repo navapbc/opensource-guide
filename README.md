@@ -27,7 +27,7 @@
   </a>
 </h4>
 
-<img src="/img/infisical_github_repo2.png" width="100%" alt="Dashboard" />
+<img src="/img/OSCER_github_repo.png" width="100%" alt="Dashboard" />
 ## 🎯 Overview
 
 This open-source project provides a complete solution for state Medicaid agencies to manage community engagement requirements, including:
