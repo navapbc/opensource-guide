@@ -28,7 +28,8 @@
 </h4>
 
 <img src="/img/OSCER_github_repo.png" width="100%" alt="Dashboard" />
-## 🎯 Overview
+
+## Introduction
 
 This open-source project provides a complete solution for state Medicaid agencies to manage community engagement requirements, including:
 
@@ -38,7 +39,9 @@ This open-source project provides a complete solution for state Medicaid agencie
 - **Case Management**: Staff tools for reviewing applications, managing tasks, and tracking compliance
 - **Multi-language Support**: Built-in internationalization with English and Spanish support
 
-## 🏗️ Architecture
+## Features
+
+### Architecture
 
 The platform consists of:
 
@@ -54,7 +57,7 @@ The platform consists of:
 - **Testing**: RSpec, Playwright (E2E)
 - **CI/CD**: GitHub Actions
 
-## 🚀 Quick Start
+## Getting Started
 
 ### Prerequisites
 
