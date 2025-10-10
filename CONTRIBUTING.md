@@ -1,25 +1,18 @@
 # Contributing to Community Engagement Medicaid
 
-Thank you for your interest in contributing to the Community Engagement Medicaid platform! This project helps state Medicaid agencies manage community engagement requirements, and we welcome contributions from developers, designers, policy experts, and community members.
+Thank you for your interest in contributing to the Community Engagement Medicaid platform! This project helps state Medicaid agencies manage community engagement requirements, and we welcome contributions from developers, designers, policy experts, and community members. This document outlines how members of the community should approach the contribution process.
 
-## 🎯 Ways to Contribute
+## Community
 
-### Code Contributions
-- Bug fixes and feature improvements
-- New features and enhancements
-- Performance optimizations
-- Security improvements
-- Documentation updates
+We are committed to providing a welcoming and inclusive environment for all contributors. All contributors are expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-### Non-Code Contributions
-- Bug reports and feature requests
-- Documentation improvements
-- User experience feedback
-- Accessibility testing
-- Translation and localization
-- Community support and discussions
+## Bugs and issues
 
-## 🚀 Getting Started
+Bug reports are welcome, as they make OSCER better for everyone who uses it. Create a GitHub issue using the bug template to make sure it contains the neccessary information for us to triage the issue. Prior to filing an issue, please search the existing issues to make sure it is not a duplicate.
+
+If the issue is related to security, please email us directly at strata@navapbc.com
+
+## Getting Started
 
 ### Prerequisites
 
@@ -31,42 +24,228 @@ Before contributing, ensure you have:
 - Understanding of AWS services (for infrastructure contributions)
 - Familiarity with U.S. Web Design System (for frontend contributions)
 
-### Development Setup
+## Development Setup
 
-1. **Fork and Clone**
-   ```bash
-   # Fork the repository on GitHub, then clone your fork
-   git clone https://github.com/YOUR-USERNAME/community-engagement-medicaid.git
-   cd community-engagement-medicaid
-   ```
+### Choose Your Setup Method
 
-2. **Set Up Development Environment**
-   ```bash
-   cd reporting-app
-   make .env
-   # Edit .env file with development configuration
-   make init-container  # or init-native for local development
-   ```
+We offer two ways to run the application locally:
 
-3. **Start Development Server**
-   ```bash
-   make start-container  # or start-native
-   # Application available at http://localhost:3000
-   ```
+#### **Docker Setup**
 
-4. **Run Tests**
-   ```bash
-   # Ruby/Rails tests
-   cd reporting-app && bundle exec rspec
-   
-   # End-to-end tests
-   make e2e-test APP_NAME=reporting-app BASE_URL=http://localhost:3000
-   
-   # Infrastructure tests
-   make infra-test-service APP_NAME=reporting-app
-   ```
+- **Pros**: No need to install Ruby, PostgreSQL, or manage dependencies
+- **Cons**: Requires Docker Desktop
+- **Best for**: New contributors, quick setup, consistent environments
 
-## 📋 Development Workflow
+#### **Native Setup**
+
+- **Pros**: Faster performance, familiar development environment
+- **Cons**: Need to install and manage Ruby, PostgreSQL, and dependencies
+- **Best for**: Experienced Rails developers, performance-sensitive work
+
+---
+
+## Docker Setup (Recommended)
+
+### What You'll Need
+
+Before we start, make sure you have:
+
+- **Docker** installed and running ([Download here](https://www.docker.com/products/docker-desktop/))
+- **Git** to clone the repository
+- A **text editor** or IDE of your choice
+- About **10-15 minutes** for the initial setup
+
+> **New to Docker?** Don't worry! Docker will handle all the complex environment setup for you. You won't need to install Ruby, PostgreSQL, or manage dependencies manually.
+
+### Quick Start (5 Steps)
+
+#### Step 1: Clone the Repository
+
+First, get a copy of the code on your local machine:
+
+```bash
+git clone https://github.com/navapbc/community-engagement-medicaid.git
+cd community-engagement-medicaid
+```
+
+#### Step 2: Set Up Your Environment
+
+Navigate to the reporting app directory and create your local environment file:
+
+```bash
+cd reporting-app
+cp local.env.example .env
+```
+
+> **What's this doing?** The `.env` file contains configuration settings for your local development environment. The example file has sensible defaults that work out of the box, including mock authentication so you don't need real AWS credentials to get started.
+
+#### Step 3: Check Docker is Running
+
+Make sure Docker is running, then verify it's working:
+
+```bash
+docker --version
+```
+
+You should see something like `Docker version 26.1.4, build 5650f9b102`. If you get an error, make sure Docker is started.
+
+#### Step 4: Start the Application
+
+This is where the magic happens! Run this single command to build and start everything:
+
+```bash
+docker-compose up --build -d
+```
+
+> **What's happening?** Docker is:
+>
+> - Building a container with Ruby, Rails, and all dependencies
+> - Starting a PostgreSQL database
+> - Setting up the development environment
+> - Running everything in the background (`-d` flag)
+
+This will take a few minutes the first time as Docker downloads and builds everything.
+
+#### Step 5: Set Up the Database
+
+Run the database migrations to create the necessary tables:
+
+```bash
+docker-compose exec reporting-app bin/rails db:migrate
+```
+
+#### You're Done!
+
+Open your browser and go to **http://localhost:3000**
+
+You should see the Community Engagement Medicaid reporting app running locally!
+
+## Native Setup (Alternative)
+
+If you prefer to run the application natively without Docker, follow these steps. This approach gives you more control and potentially better performance, but requires managing dependencies yourself.
+
+### What You'll Need
+
+- **Ruby 3.4.6** (check `.ruby-version` file for exact version)
+- **PostgreSQL 14+** running locally
+- **Node.js 22+** and **npm** for asset compilation
+- **Git** to clone the repository
+- **Bundler** gem for Ruby dependency management
+
+### Installation Steps
+
+#### Step 1: Install System Dependencies
+
+##### On macOS (using Homebrew):
+
+```bash
+# Install Ruby version manager (if you don't have one)
+brew install rbenv
+
+# Install the required Ruby version
+rbenv install 3.4.6
+rbenv global 3.4.6
+
+# Install PostgreSQL
+brew install postgresql@14
+brew services start postgresql@14
+
+# Install Node.js
+brew install node@22
+```
+
+##### On Ubuntu/Debian:
+
+```bash
+# Install Ruby dependencies
+sudo apt update
+sudo apt install -y build-essential libssl-dev libreadline-dev zlib1g-dev libpq-dev
+
+# Install rbenv for Ruby version management
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+
+# Install Ruby
+rbenv install 3.4.6
+rbenv global 3.4.6
+
+# Install PostgreSQL
+sudo apt install -y postgresql postgresql-contrib
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+# Install Node.js
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt install -y nodejs
+```
+
+#### Step 2: Clone and Setup the Repository
+
+```bash
+git clone https://github.com/navapbc/community-engagement-medicaid.git
+cd community-engagement-medicaid/reporting-app
+```
+
+#### Step 3: Install Ruby Dependencies
+
+```bash
+# Install bundler if you don't have it
+gem install bundler
+
+# Install application gems
+bundle install
+```
+
+#### Step 4: Install JavaScript Dependencies
+
+```bash
+npm install
+```
+
+#### Step 5: Set Up Your Environment
+
+```bash
+cp local.env.example .env
+```
+
+Edit the `.env` file and update the database settings:
+
+```bash
+# Change these lines in your .env file:
+DB_HOST=localhost
+DB_NAME=community_engagement_medicaid_development
+DB_USER=your_postgres_username
+DB_PASSWORD=your_postgres_password
+DB_PORT=5432
+```
+
+#### Step 6: Set Up the Database
+
+```bash
+# Create the database user (if needed)
+createuser -s app  # or use your preferred PostgreSQL user
+
+# Create and set up the database
+bin/rails db:create
+bin/rails db:migrate
+bin/rails db:seed  # Optional: load sample data
+```
+
+#### Step 7: Start the Application
+
+```bash
+# Start the development server
+bin/dev
+```
+
+This will start:
+
+- The Rails server on http://localhost:3000
+- The CSS build process (watching for changes)
+
+## Development Workflow
 
 ### 1. Choose an Issue
 
@@ -108,6 +287,7 @@ git push origin your-branch-name
 ```
 
 Then create a pull request on GitHub with:
+
 - Clear title and description
 - Reference to related issues
 - Screenshots for UI changes
@@ -147,7 +327,7 @@ Then create a pull request on GitHub with:
 - Follow security best practices
 - Ensure backwards compatibility when possible
 
-## 🧪 Testing Guidelines
+## Testing Guidelines
 
 ### Unit Tests
 
@@ -177,30 +357,7 @@ Then create a pull request on GitHub with:
 - Check for common vulnerabilities
 - Test file upload security
 
-## 📚 Documentation
-
-### Code Documentation
-
-- Document complex algorithms and business logic
-- Include inline comments for non-obvious code
-- Update README files for significant changes
-- Document API endpoints and parameters
-
-### User Documentation
-
-- Update user guides for new features
-- Include screenshots for UI changes
-- Write clear, step-by-step instructions
-- Consider multiple user personas
-
-### Technical Documentation
-
-- Document architecture decisions
-- Update deployment guides
-- Include troubleshooting information
-- Document configuration options
-
-## 🔍 Code Review Process
+## Code Review Process
 
 ### Submitting for Review
 
@@ -226,137 +383,5 @@ Reviewers will check for:
 - Make requested changes or discuss alternatives
 - Update tests and documentation as needed
 - Re-request review after making changes
-
-## 🚨 Security Considerations
-
-### Secure Development
-
-- Never commit secrets or credentials
-- Validate all user inputs
-- Use parameterized queries
-- Implement proper authentication and authorization
-- Follow OWASP security guidelines
-
-### Reporting Security Issues
-
-- Do NOT create public issues for security vulnerabilities
-- Report security issues to [security@navapbc.com](mailto:security@navapbc.com)
-- See [SECURITY.md](SECURITY.md) for detailed reporting process
-
-## 🌐 Accessibility Requirements
-
-### WCAG 2.1 AA Compliance
-
-- Use semantic HTML elements
-- Provide alternative text for images
-- Ensure keyboard navigation works
-- Maintain sufficient color contrast
-- Test with screen readers
-
-### Testing Accessibility
-
-- Use automated accessibility testing tools
-- Test with keyboard-only navigation
-- Verify screen reader compatibility
-- Check color contrast ratios
-- Test with users who have disabilities
-
-## 🌍 Internationalization
-
-### Adding New Languages
-
-- Use Rails i18n framework
-- Add translations to appropriate locale files
-- Test with different text lengths
-- Consider right-to-left languages
-- Validate date and number formatting
-
-### Translation Guidelines
-
-- Use clear, simple language
-- Avoid technical jargon
-- Consider cultural context
-- Test translations with native speakers
-- Maintain consistency across the application
-
-## 📞 Getting Help
-
-### Community Support
-
-- **GitHub Discussions**: Ask questions and share ideas
-- **GitHub Issues**: Report bugs and request features
-- **Documentation**: Check existing documentation first
-
-### Direct Contact
-
-- **General Questions**: Create a GitHub discussion
-- **Bug Reports**: Create a GitHub issue
-- **Security Issues**: Email [security@navapbc.com](mailto:security@navapbc.com)
-- **Contribution Questions**: Comment on relevant issues
-
-## 🏛️ Legal and Licensing
-
-### Contributor License Agreement
-
-By contributing to this project, you agree that:
-
-- Your contributions are your original work
-- You have the right to submit your contributions
-- Your contributions are released under the project's license
-- You understand this is a public domain project (CC0 1.0)
-
-### Code of Conduct
-
-All contributors must follow our [Code of Conduct](CODE_OF_CONDUCT.md). We are committed to providing a welcoming and inclusive environment for all contributors.
-
-## 🎉 Recognition
-
-### Contributors
-
-- All contributors are recognized in our contributor list
-- Significant contributions may be highlighted in release notes
-- We appreciate all forms of contribution, not just code
-
-### Maintainers
-
-Current maintainers:
-- Nava PBC Engineering Team
-- State agency partners
-- Community maintainers
-
-## 📈 Project Roadmap
-
-### Current Priorities
-
-- Enhanced accessibility features
-- Performance optimizations
-- Additional language support
-- Improved mobile experience
-- Enhanced security features
-
-### Future Goals
-
-- API improvements
-- Advanced reporting features
-- Integration with additional state systems
-- Enhanced user experience
-- Expanded documentation
-
-## 🔄 Release Process
-
-### Versioning
-
-We follow [Semantic Versioning](https://semver.org/):
-- **Major**: Breaking changes
-- **Minor**: New features (backwards compatible)
-- **Patch**: Bug fixes (backwards compatible)
-
-### Release Schedule
-
-- Regular releases every 2-4 weeks
-- Security patches released as needed
-- Major releases announced in advance
-
----
 
 Thank you for contributing to the Community Engagement Medicaid platform! Your contributions help improve healthcare access and administration for millions of Americans.
