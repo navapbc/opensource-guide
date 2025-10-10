@@ -1,7 +1,5 @@
 # Community Engagement Medicaid
 
-,
-
 <h1 align="center">
   <img width="300" src="/img/logoname-white.svg#gh-dark-mode-only" alt="infisical">
 </h1>
