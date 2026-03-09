@@ -1,5 +1,5 @@
 <p>
-  <h1>Nava Open Source Template</h1>
+  <h1>Nava Open Source</h1>
 </p>
 <p><i>Open source tools for every layer of government service delivery.</i></p>
 <p><b>A comprehensive template to quickly bootstrap open source projects with best practices and essential documentation.</b></p>
