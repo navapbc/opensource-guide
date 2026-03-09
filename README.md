@@ -1,8 +1,8 @@
 <p>
   <h1>Nava Open Source</h1>
 </p>
-<p><i>Open source tools for every layer of government service delivery.</i></p>
-<p><b>A comprehensive template to quickly bootstrap open source projects with best practices and essential documentation.</b></p>
+<p><i>Advancing open source solutions for government.</i></p>
+<p><b>Building the strategy, standards, and partnerships to advance open source solutions for government</b></p>
 
 <h4 align="center">
   <a href="https://github.com/navapbc/opensource-strategy-template/blob/main/LICENSE">
