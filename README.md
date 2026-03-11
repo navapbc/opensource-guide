@@ -1,6 +1,8 @@
-<img src="assets/OSPO_Logo_Artwork.svg" alt="Nava Open Source Program Office" width="400" align="left">
-
-<br clear="all">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/OSPO_Logo_Artwork_White.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/OSPO_Logo_Artwork.svg">
+  <img src="assets/OSPO_Logo_Artwork.svg" alt="Nava Open Source Program Office" width="400">
+</picture>
 
 **Advancing open source solutions for government**
 
