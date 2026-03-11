@@ -1,4 +1,6 @@
-# Nava Open Source Guide
+<img src="assets/OSPO_Logo_Artwork.svg" alt="Nava Open Source Program Office" width="400" align="left">
+
+<br clear="all">
 
 **Advancing open source solutions for government**
 
