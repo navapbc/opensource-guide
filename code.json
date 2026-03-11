@@ -1,34 +1,36 @@
 {
-  "name": "(TEMPLATE: REPLACE ME)",
+  "name": "Nava Open Source Guide",
   "version": "1.0.0",
-  "description": "(TEMPLATE: REPLACE ME)",
-  "status": "(TEMPLATE: REPLACE ME)",
+  "description": "Nava's guide to using, contributing to, and publishing open source software for government technology",
+  "status": "Production",
   "permissions": {
     "licenses": [
       {
         "name": "Apache-2.0",
-        "URL": "https://github.com/navapbc/strata/blob/main/LICENSE.md"
+        "URL": "https://github.com/navapbc/opensource-guide/blob/main/LICENSE.MD"
       }
     ],
     "usageType": ["openSource"]
   },
   "organization": "Nava",
-  "repositoryURL": "https://github.com/navapbc/",
+  "repositoryURL": "https://github.com/navapbc/opensource-guide",
   "repositoryVisibility": "public",
   "vcs": "git",
   "reuseFrequency": {
     "forks": 2
   },
-  "languages": ["(TEMPLATE: REPLACE ME)"],
+  "languages": ["Markdown"],
   "maintenance": "internal",
-  "SBOM": "https://github.com/navapbc/(TEMPLATE: REPLACE ME)/network/dependencies",
+  "SBOM": "https://github.com/navapbc/opensource-guide/network/dependencies",
   "date": {
     "created": "2022-09-08T23:06:37Z",
     "lastModified": "2025-10-16T18:20:45Z",
     "metadataLastUpdated": "2025-10-16T19:37:20.815Z"
   },
-  "tags": ["platform", "sdk"],
-  "contact": {},
-  "feedbackMechanism": "https://github.com/navapbc/(TEMPLATE: REPLACE ME)/issues",
+  "tags": ["open-source", "government", "civic-tech", "guide"],
+  "contact": {
+    "email": "opensource@navapbc.com"
+  },
+  "feedbackMechanism": "https://github.com/navapbc/opensource-guide/issues",
   "AIUseCaseID": "0"
 }

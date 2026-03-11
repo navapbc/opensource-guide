@@ -1,38 +1,72 @@
-<p>
-  <h1>Nava Open Source</h1>
-</p>
-<p><i>Advancing open source solutions for government.</i></p>
-<p><b>Building the strategy, standards, and partnerships to advance open source solutions for government</b></p>
+# Nava Open Source Guide
 
-<h4 align="center">
-  <a href="https://github.com/navapbc/opensource-strategy-template/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-apache_2.0-red" alt="opensource-strategy-template is released under the Apache 2.0 license" >
-  </a>
-  <a href="https://github.com/navapbc/opensource-strategy-template/blob/main/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen" alt="PRs welcome!" />
-  </a>
-  <a href="https://github.com/navapbc/opensource-strategy-template/issues">
-    <img src="https://img.shields.io/github/commit-activity/m/navapbc/opensource-strategy-template" alt="git commit activity" />
-  </a>
-  <a href="https://github.com/navapbc/opensource-strategy-template/repos/">
-    <img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/navapbc/opensource-strategy-template/total">
-  </a>
-</h4>
+**Making government services simple and effective — together, in the open.**
 
-## About This Template
+We build digital services that millions of people depend on — from accessing healthcare to receiving benefits. Open source is how we do that transparently, collaboratively, and in a way that builds lasting capacity across government. When we work in the open, agencies learn from each other, communities contribute, and the public can see and trust the technology that serves them.
 
-This repository serves as a **template** for creating new open source projects. It provides a standardized foundation that includes:
+This guide is Nava's entry point for our open source ethos, practices, and projects. Whether you're a Nava team member preparing to open source a project, a contributor looking to get involved, or someone exploring how human-centered open source works in government — welcome.
 
-- **Essential documentation** (README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY)
--  **Pre-configured licensing** (Apache 2.0)
--  **GitHub workflows and issue templates**
--  **Community health files**
+---
 
-### How to Use This Template
+## Guide Sections
 
-1. Click "Use this template" to create a new repository
-2. Replace placeholder content with your project-specific information
-3. Customize the documentation to match your project's needs
-4. Update badges and links to point to your new repository
+### [Using Open Source](docs/using/index.md)
+How to evaluate and adopt open source software at Nava. Covers evaluation criteria, license considerations, and government-specific factors.
 
-**Note:** Remember to update all references to "opensource-strategy-template" with your actual project name throughout the files.
+- [Understanding License Types](docs/using/license-types.md)
+
+### [Contributing to Open Source](docs/contributing/index.md)
+How Nava team members contribute to external open source projects. Covers CLAs, representing Nava, and contribution best practices.
+
+- [Contribution Recordkeeping](docs/contributing/recordkeeping.md)
+
+### [Publishing Open Source](docs/publishing/index.md)
+The complete lifecycle of releasing Nava code as open source — from preparation through ongoing maintenance.
+
+- [Preparing Code for Release](docs/publishing/prepare.md)
+- [Getting Approval](docs/publishing/approval.md)
+- [Publishing Your Project](docs/publishing/publish.md)
+- [Managing Releases](docs/publishing/release.md)
+
+### [Launching Projects](docs/launching/index.md)
+Special considerations based on project type, including government technology and infrastructure projects.
+
+- [Government Technology Projects](docs/launching/government-projects.md)
+- [Infrastructure and Platform Projects](docs/launching/infrastructure.md)
+
+### [Promoting Open Source](docs/promoting/index.md)
+Building community and visibility around Nava's open source work.
+
+- [Writing About Your Project](docs/promoting/blog.md)
+- [Open Source Citizenship](docs/promoting/citizenship.md)
+- [Supporting Your Community](docs/promoting/support.md)
+
+### [Accepting Contributions](docs/accepting/index.md)
+How to manage inbound contributions to Nava's open source projects, from setting expectations to reviewing external PRs.
+
+### [Resources](docs/resources/index.md)
+Reference material, FAQs, and foundational knowledge for open source at Nava.
+
+- [License Reference](docs/resources/licenses.md)
+- [Copyright Guidance](docs/resources/copyright.md)
+- [Code Ownership](docs/resources/ownership.md)
+- [Branding Guidelines](docs/resources/branding.md)
+
+### [Our Projects](docs/projects/index.md)
+Nava's open source portfolio, including active projects and how to get involved.
+
+- [Strata](docs/projects/strata.md)
+- [OSCER](docs/projects/oscer.md)
+
+---
+
+## Community
+
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Contributing to This Guide](CONTRIBUTING.md)
+- [Security Policy](SECURITY.md)
+- [License (Apache 2.0)](LICENSE.MD)
+
+## About Nava
+
+[Nava PBC](https://www.navapbc.com) partners with government agencies to design and build simple, effective digital services. As a public benefit corporation, we're accountable to our mission — making it easier for people to access the services they need. Working in the open and contributing to the civic technology ecosystem is central to how we do that. Learn more at [navapbc.com](https://www.navapbc.com).
