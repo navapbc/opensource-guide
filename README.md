@@ -1,6 +1,8 @@
 # Nava Open Source Guide
 
-**Making government services simple and effective — together, in the open.**
+**Advancing open source solutions for government**
+
+Building the strategy, standards, and partnerships to advance open source solutions for government
 
 We build digital services that millions of people depend on — from accessing healthcare to receiving benefits. Open source is how we do that transparently, collaboratively, and in a way that builds lasting capacity across government. When we work in the open, agencies learn from each other, communities contribute, and the public can see and trust the technology that serves them.
 
