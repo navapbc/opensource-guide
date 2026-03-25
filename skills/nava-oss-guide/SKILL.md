@@ -110,7 +110,7 @@ When asked, generate a CONTRIBUTING.md appropriate for a Nava project. It must i
 - How to submit a pull request (branch naming, PR description, review process)
 - Code style and standards note
 - Reference to the CODE_OF_CONDUCT.md
-- CLA/DCO statement (default: no CLA required, Apache 2.0 terms apply)
+- CLA/DCO decision — see the [guide's acceptance section](https://github.com/navapbc/opensource-guide/blob/main/docs/accepting/index.md) for when to require a CLA vs. DCO vs. neither
 
 Base the content on the project's README and any context the user has provided. See guide requirements: `docs/publishing/prepare.md` and `docs/accepting/index.md`.
 
@@ -120,37 +120,40 @@ Base the content on the project's README and any context the user has provided. 
 
 ```json
 {
-  "version": "2.0.0",
-  "measurementType": {
-    "method": "modules"
-  },
-  "releases": [
-    {
-      "name": "[project name]",
-      "version": "[version]",
-      "organization": "Nava PBC",
-      "description": "[one sentence description]",
-      "status": "Production",
-      "vcs": "git",
-      "repositoryURL": "https://github.com/navapbc/[repo-name]",
-      "homepageURL": "https://github.com/navapbc/[repo-name]",
-      "downloadURL": "https://github.com/navapbc/[repo-name]/archive/main.zip",
-      "languages": ["[primary language]"],
-      "tags": ["government", "open-source"],
-      "contact": {
-        "email": "opensource@navapbc.com"
-      },
-      "license": "https://spdx.org/licenses/Apache-2.0.html",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "exemptionText": null,
-      "date": {
-        "created": "[YYYY-MM-DD]",
-        "lastModified": "[YYYY-MM-DD]",
-        "metadataLastUpdated": "[YYYY-MM-DD]"
+  "name": "[Project Name]",
+  "version": "[version, e.g. 1.0.0]",
+  "description": "[One sentence description of the project]",
+  "status": "Production",
+  "permissions": {
+    "licenses": [
+      {
+        "name": "Apache-2.0",
+        "URL": "https://github.com/navapbc/[repo-name]/blob/main/LICENSE.MD"
       }
-    }
-  ]
+    ],
+    "usageType": ["openSource"]
+  },
+  "organization": "Nava",
+  "repositoryURL": "https://github.com/navapbc/[repo-name]",
+  "repositoryVisibility": "[public or private]",
+  "vcs": "git",
+  "reuseFrequency": {
+    "forks": "[number of forks]"
+  },
+  "languages": ["[primary language, e.g. TypeScript]"],
+  "maintenance": "[internal, contract, community, or none]",
+  "SBOM": "https://github.com/navapbc/[repo-name]/network/dependencies",
+  "date": {
+    "created": "[YYYY-MM-DDTHH:MM:SSZ]",
+    "lastModified": "[YYYY-MM-DDTHH:MM:SSZ]",
+    "metadataLastUpdated": "[YYYY-MM-DDTHH:MM:SSZ]"
+  },
+  "tags": ["[tag1]", "[tag2]"],
+  "contact": {
+    "email": "opensource@navapbc.com"
+  },
+  "feedbackMechanism": "https://github.com/navapbc/[repo-name]/issues",
+  "AIUseCaseID": "0"
 }
 ```
 
