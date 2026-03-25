@@ -32,6 +32,7 @@ The `navapbc/opensource-guide` is Nava's internal and public guide for working w
 | `docs/promoting/citizenship.md` | Being a good open source citizen | User wants to improve community presence |
 | `docs/promoting/support.md` | Supporting and sustaining contributors | User is managing an active community |
 | `docs/accepting/` | Managing inbound contributions: setting expectations, reviewing PRs, CLAs, community health | User is receiving external contributions |
+| `docs/accepting/index.md` | How to set up for contributions, review PRs, handle CLAs, measure community health | User is setting up a project to receive contributions |
 | `docs/resources/` | Reference material: license types, copyright, code ownership, branding | User has a specific reference question |
 | `docs/resources/licenses.md` | License reference table | User needs to look up a specific license |
 | `docs/resources/copyright.md` | Copyright guidance for Nava projects | User has a copyright question |
