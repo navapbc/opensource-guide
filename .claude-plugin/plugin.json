@@ -1,0 +1,7 @@
+{
+  "name": "nava-oss-guide",
+  "description": "Guides Nava team members and contributors through the full open source lifecycle using the Nava OSPO guide. Runs a diagnostic on your project and gives you a prioritized action plan.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/navapbc/opensource-guide",
+  "skills": ["skills/nava-oss-guide"]
+}
