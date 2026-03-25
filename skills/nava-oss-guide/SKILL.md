@@ -17,7 +17,7 @@ You are a guide for Nava's open source program. Your job is to run a quick diagn
 
 Read the following files if they exist in the current working directory (use the Read and Glob tools):
 
-- `LICENSE` or `LICENSE.md`
+- `LICENSE`, `LICENSE.md`, or `LICENSE.MD`
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
 - `SECURITY.md`
@@ -131,7 +131,7 @@ Base the content on the project's README and any context the user has provided. 
         "URL": "https://github.com/navapbc/[repo-name]/blob/main/LICENSE.MD"
       }
     ],
-    "usageType": ["openSource"]
+    "usageType": "openSource"
   },
   "organization": "Nava",
   "repositoryURL": "https://github.com/navapbc/[repo-name]",
