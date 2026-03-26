@@ -98,6 +98,12 @@ After presenting the action plan, ask: **"Want me to walk through any of these w
 
 If the user says yes, work through items one at a time.
 
+### Use subagents for speed
+
+When the action plan has multiple independent items (e.g., generate CONTRIBUTING.md, generate issue templates, and generate code.json), dispatch them as parallel subagents rather than working through them sequentially. Each subagent gets a single artifact to produce and returns the result as a fenced code block. Collect all results and present them together. This is significantly faster than one-at-a-time execution.
+
+Example: if a user needs CONTRIBUTING.md + code.json + issue templates, dispatch three subagents in parallel, each with the relevant project context, and present all three outputs at once for review.
+
 ### Generating artifacts
 
 Output all generated content as fenced code blocks in chat. Tell the user to review before applying. Do not write files directly.
