@@ -165,6 +165,40 @@ Base the content on the project's README and any context the user has provided. 
 
 Fill in all `[bracketed]` fields with real values from the project context.
 
+#### Standard boilerplate files (copy-paste, minimal changes)
+
+These files are the same across all Nava projects. Output the full content as a fenced code block and tell the user what to update.
+
+**CODE_OF_CONDUCT.md** — Contributor Covenant v2.0. The only thing to change is the enforcement contact email on line 63. The current guide uses `strata@navapbc.com` — replace it with the project's actual contact email before copying.
+
+> ⚠️ **Remind the user:** Update the enforcement email address (`strata@navapbc.com` in the guide's version) to the appropriate contact for their project.
+
+When asked, output the full content from: `https://github.com/navapbc/opensource-guide/blob/main/CODE_OF_CONDUCT.md` — read the file using the Read tool and output it verbatim, with the email placeholder highlighted.
+
+**LICENSE.MD** — Standard Apache 2.0 text. No changes needed — copy as-is from the guide repo.
+
+When asked, read `https://github.com/navapbc/opensource-guide/blob/main/LICENSE.MD` and output it verbatim. No customization required.
+
+**SECURITY.md** — Needs moderate customization. When asked, generate this template:
+
+```markdown
+# Security Policy
+
+## Supported Versions
+
+We recommend using the latest version of [PROJECT NAME] for the most current security fixes.
+
+## Reporting Vulnerabilities
+
+Please do not file GitHub issues for security vulnerabilities, as they are public.
+
+[PROJECT NAME] takes security issues seriously. If you have any concerns or believe you have uncovered a vulnerability, please get in touch via email at [SECURITY EMAIL]. In your message, include a description of the issue and ideally a way to reproduce it. We will get back to you as soon as possible.
+
+Please report security problems to us before disclosing publicly.
+```
+
+> ⚠️ **Remind the user:** Replace `[PROJECT NAME]` with the project name and `[SECURITY EMAIL]` with the appropriate security contact email (typically `opensource@navapbc.com` or a project-specific address).
+
 #### GitHub issue templates
 
 When asked, generate two templates in `.github/ISSUE_TEMPLATE/`:
